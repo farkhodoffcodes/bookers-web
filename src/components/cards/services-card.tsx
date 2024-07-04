@@ -12,7 +12,7 @@ const ServicesCard = ({ data }: { data: any }) => {
                 className="rounded-lg w-full mb-4"
             />
             <div>
-                <h3 className="text-xl font-bold mb-2">{data.title}</h3>
+                <h3 className="text-xl font-extrabold mb-2">{data.title}</h3>
                 <div className="flex items-center mb-4">
                     <Image
                         src={data.avatarImage}
@@ -20,16 +20,16 @@ const ServicesCard = ({ data }: { data: any }) => {
                         className="w-10 h-10 rounded-full mr-3"
                     />
                     <div>
-                        <p className="text-lg font-semibold">{data.firstName}</p>
+                        <p className="text-lg font-bold">{data.firstName}</p>
                         <p className="text-sm text-gray-600">{data.service}</p>
                     </div>
                 </div>
-                <p className="text-2xl font-bold text-red-600 mb-4">{data.price} сум</p>
+                <p className="text-xl font-extrabold text-[#9C0B35] mb-4">{data.price} сум</p>
                 <div className="flex items-center mb-4">
                     <FaMapMarkerAlt className="text-blue-500" />
                     <p className="text-sm text-gray-700 ml-2">{data.location}</p>
                 </div>
-                <p className="text-sm text-gray-700 mb-4">{data.posts}</p>
+                <p className="text-sm font-extrabold text-slate-900 mb-4">{data.posts}</p>
                 <Button title={data.buttonName} />
             </div>
         </div>
