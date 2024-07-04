@@ -2,8 +2,8 @@ import ServicesCard from "@/components/cards/services-card"
 import { Metadata } from "next";
 import images from '@/assets/serveces/servece.png'
 import avatar from '@/assets/serveces/avatar.png'
-import VacanciesCard from "@/components/cards/vacancies";
-import HeaderTitle from "@/components/text/header-title";
+import BeautyService from "@/components/cards/beauty-service";
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 export const metadata: Metadata = {
   title: "Bookers | Services",
@@ -136,7 +136,6 @@ const servicesData = [
 const Services = () => {
   return (
     <section className="py-10">
-      <HeaderTitle text="Выберите свою услугу красоты в bookers" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {servicesData.map(services => (
           <ServicesCard data={services} />
