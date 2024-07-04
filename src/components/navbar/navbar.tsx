@@ -11,11 +11,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between px-20 py-4 bg-gray-900 text-white">
             <div className="flex flex-col items-center gap-1">
                 <Image src={logo} alt="bookers logo" className="h-13 w-7" />
-                <span className="ml-2 font-bold">bookers</span>
+                <span className="ml-2 font-[10px]">bookers</span>
             </div>
             <div className="flex space-x-6">
                 <div className="relative group">
-                    <button className=" flex items-center gap-3">
+                    <button className="flex items-center gap-3">
                         Bookers
                         <IoIosArrowDown />
                     </button>
