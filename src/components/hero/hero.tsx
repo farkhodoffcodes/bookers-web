@@ -2,13 +2,12 @@
 
 import React from 'react';
 import '../../app/globals.css';
-import heroImg from '../../../assets/images/firstHero.png';
 import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import HeaderTitle from '../text/header-title';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image'; 
 
-const Hero: React.FC<{ splide?: boolean, title?: string, description?: string }> = ({ splide, title, description }) => {
+const Hero: React.FC<{ splide?: boolean, title?: string, description?: string, heroImg?: StaticImageData }> = ({ splide, title, description, heroImg }) => {
   return (
     <div className="relative h-screen w-full">
       {splide ? (
@@ -31,19 +30,19 @@ const Hero: React.FC<{ splide?: boolean, title?: string, description?: string }>
                 </p>
               </div>
               <div className="w-full md:w-1/2 flex justify-center mt-4 md:mt-0">
-                <Image className="rounded-lg" src={heroImg} alt="Hero image" width={400} height={400} />
+                <Image className="rounded-lg" src={heroImg ? heroImg : ''} alt="Hero image" width={400} height={400} />
               </div>
             </div>
           </SplideSlide>
         </Splide>
       ) : (
         <div className="flex flex-col md:flex-row justify-between items-center h-full p-4 md:p-8">
-          <div className="w-full md:w-1/2 text-white">
+          <div className="w-full md:w-1/2 flex flex-col gap-5 text-white">
             <HeaderTitle text={`${title}`} />
             <p className="text-gray-300 text-lg mt-4">{description}</p>
           </div>
           <div className="w-full md:w-1/2 flex justify-center mt-4 md:mt-0">
-            <Image className="rounded-lg" src={heroImg} alt="Hero image" width={400} height={400} />
+            <Image className="rounded-lg" src={heroImg ? heroImg : ''} alt="Hero image" width={400} height={400} />
           </div>
         </div>
       )}
