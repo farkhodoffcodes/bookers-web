@@ -1,6 +1,10 @@
+import ServicesCard from "@/components/cards/services-card"
+
 const Services = () => {
   return (
-    <div>Services</div>
+    <section>
+      <ServicesCard />
+    </section>
   )
 }
 
