@@ -1,12 +1,13 @@
 "use client";
 import Button from "@/components/button/button";
 import i18n from "i18next";
-import React, { useEffect } from "react";
-import { initReactI18next, useTranslation } from "react-i18next";
+import React, { Fragment, useEffect, useState } from "react";
+import { initReactI18next } from "react-i18next";
 import { en } from "@/cons/language/en";
 import { ru } from "@/cons/language/ru";
 import { uz } from "@/cons/language/uz";
 import languageStore from "@/types/language/languageStore";
+import ModalForm from "@/components/modal/ModalForm";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -19,9 +20,8 @@ i18n.use(initReactI18next).init({
 });
 
 const Home = () => {
-  const { selectedLanguage, setLang } = languageStore();
-
-  const { t } = useTranslation();
+  const { selectedLanguage, setLang, setSelectedLanguage } = languageStore();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Component ilk render bo'lganda ishlaydigan useEffect
   useEffect(() => {
@@ -29,10 +29,21 @@ const Home = () => {
     setLang(selectedLanguage);
   }, [selectedLanguage]);
 
+  const handleButtonClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <div>
-      <Button title={t("loginRegister")} outlineStyle />
-    </div>
+    <Fragment>
+      <div>
+        <Button title="Войти / Регистрация" outlineStyle onClick={handleButtonClick} />
+      </div>
+      {isModalOpen && <ModalForm onClose={handleCloseModal} />}
+    </Fragment>
   );
 };
 
