@@ -4,5 +4,6 @@ export interface ButtonTypes {
     outlineStyle?: boolean;
     isDisabled?: boolean;
     icon?: any;
+    customStyle?: string 
   }
   
