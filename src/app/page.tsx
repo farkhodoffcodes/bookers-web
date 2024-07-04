@@ -3,8 +3,8 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='w-[100px]'>
-      <Button title='Войти'/>
+    <div>
+      <Button title='Войти / Регистрация' outlineStyle/>
     </div>
   )
 }
