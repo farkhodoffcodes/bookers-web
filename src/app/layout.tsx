@@ -2,6 +2,16 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+// Default theme
+import '@splidejs/splide/css';
+
+// or other themes
+import '@splidejs/splide/css/skyblue';
+import '@splidejs/splide/css/sea-green';
+
+// or only core styles
+import '@splidejs/splide/css/core';
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
