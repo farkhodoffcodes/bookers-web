@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.className} bg-[#21212E]`}>
-        <div className="min-h-screen">
+        <div className="min-h-screen max-w-[1200px] mx-auto xl:px-0 px-5 md:px-10">
           {children}
         </div>
         <Footer />
