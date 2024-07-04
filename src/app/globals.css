@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hero {
+    background-image: url('../../assets//images/firstHero.png');
+    width: 200px;
+    height: 200px;
+}
