@@ -6,20 +6,24 @@ import uzbekImg from '../../../assets/images/uzbekFlag.png';
 import usaImg from '../../../assets/images/usaFlag.png';
 import russianImg from '../../../assets/images/russiaFlag.png';
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import languageStore from '@/types/language/languageStore';
+import { changeLanguage } from '@/types/language/languageFunctions';
 
 type MenuOption = {
+    value: string
     name: string;
     friendlyName: string;
     icon?: StaticImageData;
 };
 
 const options: MenuOption[] = [
-    { name: 'RUS', friendlyName: 'RUS', icon: russianImg },
-    { name: 'UZB', friendlyName: 'UZB', icon: uzbekImg },
-    { name: 'ENG', friendlyName: 'ENG', icon: usaImg },
+    { name: 'UZB', value: "uz", friendlyName: 'UZB', icon: uzbekImg },
+    { name: 'RUS', value: "ru", friendlyName: 'RUS', icon: russianImg },
+    { name: 'ENG', value: "en", friendlyName: 'ENG', icon: usaImg },
 ];
 
 const DropdownMenu: React.FC = () => {
+    const {lang, setLang, setSelectedLanguage} = languageStore()
     const [selected, setSelected] = useState('RUS');
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -30,8 +34,13 @@ const DropdownMenu: React.FC = () => {
 
     const handleSelect = (option: MenuOption) => {
         setSelected(option.name);
+        setLang(option.value)
         setIsOpen(false);
     };
+
+    useEffect(() => {
+        changeLanguage(lang, setSelectedLanguage)
+    }, [selected])
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
