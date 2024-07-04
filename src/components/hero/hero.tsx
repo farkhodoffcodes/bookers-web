@@ -5,7 +5,7 @@ import '../../app/globals.css';
 import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import HeaderTitle from '../text/header-title';
-import Image, { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from 'next/image'; 
 
 const Hero: React.FC<{ splide?: boolean, title?: string, description?: string, heroImg?: StaticImageData }> = ({ splide, title, description, heroImg }) => {
   return (
