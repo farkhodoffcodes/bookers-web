@@ -42,7 +42,7 @@ const Home = () => {
       <div>
         <Button title="Войти / Регистрация" outlineStyle onClick={handleButtonClick} />
       </div>
-      {isModalOpen && <ModalForm onClose={handleCloseModal} />}
+      <ModalForm isOpen={isModalOpen} onClose={handleCloseModal} />
     </Fragment>
   );
 };
