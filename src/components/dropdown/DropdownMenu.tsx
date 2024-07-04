@@ -64,12 +64,12 @@ const DropdownMenu: React.FC = () => {
                 <span className="ml-2">{isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}</span>
             </button>
             {isOpen && (
-                <div className="absolute mt-2 bg-white shadow-lg rounded-md w-full z-10">
+                <div className="absolute mt-2 bg-[#B9B9C9] shadow-lg rounded-md w-full z-10">
                     <div className="drop__items p-2">
                         {options.map(option => (
                             <button
                                 key={option.name}
-                                className={`drop__btn w-full text-left p-2 text-[#000] rounded-md flex items-center ${selected === option.name ? 'bg-gray-200' : ''}`}
+                                className={`drop__btn w-full text-left p-2  rounded-md flex items-center ${selected === option.name ? 'bg-[#9c0b35] text-white' : 'text-[#000]'}`}
                                 type="button"
                                 onClick={() => handleSelect(option)}
                             >
