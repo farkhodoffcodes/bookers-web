@@ -35,7 +35,7 @@ const items = data.map((item, index) => (
 const MissionValuesCard = () => {
     return (
         <div className="text-white py-8">
-            <div className="max-w-[1200px] mx-auto">
+            <div className="max-w-[1200px] mx-auto ">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="p-6 bg-[#B9B9C9] rounded-2xl">
                         <h3 className="text-xl font-semibold mb-4 text-[#9C0B35]">Наша миссия</h3>
