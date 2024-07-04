@@ -2,6 +2,8 @@ import ServicesCard from "@/components/cards/services-card"
 import { Metadata } from "next";
 import images from '@/assets/serveces/servece.png'
 import avatar from '@/assets/serveces/avatar.png'
+import BeautyService from "@/components/cards/beauty-service";
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 export const metadata: Metadata = {
   title: "Bookers | Services",
