@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Footer = () => {
     return (
         <footer className="bg-[#161621] text-white py-8">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
+            <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <h3 className="mb-4 font-bold">Документация</h3>
                     <ul>
@@ -47,7 +47,7 @@ const Footer = () => {
                     </address>
                 </div>
             </div>
-            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-4 mt-8">
+            <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-4 mt-8">
                 <div className="mb-4 md:mb-0">
                     <p className="text-center md:text-left text-gray-400">&copy; 2024 Bookers. Все права защищены.</p>
                 </div>
