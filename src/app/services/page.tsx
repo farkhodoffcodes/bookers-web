@@ -2,6 +2,7 @@ import ServicesCard from "@/components/cards/services-card"
 import { Metadata } from "next";
 import images from '@/assets/serveces/servece.png'
 import avatar from '@/assets/serveces/avatar.png'
+import VacanciesCard from "@/components/cards/vacancies";
 
 export const metadata: Metadata = {
   title: "Bookers | Services",

@@ -24,7 +24,7 @@ const ServicesCard = ({ data }: { data: any }) => {
                         <p className="text-sm text-gray-600">{data.service}</p>
                     </div>
                 </div>
-                <p className="text-2xl font-bold text-red-600 mb-4">{data.price} сум</p>
+                <p className="text-2xl font-bold text-[#9C0B35] mb-4">{data.price} сум</p>
                 <div className="flex items-center mb-4">
                     <FaMapMarkerAlt className="text-blue-500" />
                     <p className="text-sm text-gray-700 ml-2">{data.location}</p>
