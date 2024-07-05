@@ -10,6 +10,7 @@ import Navbar from "@/components/navbar/navbar";
 
 const manrope = Manrope({ subsets: ['latin'] });
 
+
 export const metadata: Metadata = {
   title: "Bookers",
   description: "Bookers website",
