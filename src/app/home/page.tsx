@@ -11,6 +11,10 @@ import HomeOffers from '@/components/cards/homeOffers'
 import { BsGift } from "react-icons/bs";
 import { PiHandCoinsLight } from "react-icons/pi";
 import { TbVectorBezier2 } from "react-icons/tb";
+import HeaderTitle from '@/components/text/header-title'
+import BeautyService from '@/components/cards/beauty-service'
+import { GiComb } from "react-icons/gi";
+import HomeNews from '@/components/cards/homeNews'
 
 const Line = () => {
   return (
@@ -102,6 +106,36 @@ const Home = () => {
           <HomeOffers icon={BsGift} data={FirstCard} title='Что предлагает BOOKERS клиентам услуг красоты? ' />
           <HomeOffers icon={PiHandCoinsLight} data={SecondCard} title='Что предлагает BOOKERS мастерам? ' />
           <HomeOffers icon={TbVectorBezier2} data={ThirdCard} title='Какую интеграцию предлагает BOOKERS бизнес-партнерам: ' />
+        </div>
+        <Line />
+        <div>
+          <HeaderTitle text='Выберите свою услугу красоты в bookers' />
+          <div className='flex justify-between flex-wrap py-10 gap-y-5'>
+            <BeautyService icon={<GiComb />} title='Барбершоп' description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.' />
+            <BeautyService icon={<GiComb />} title='Барбершоп' description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.' />
+            <BeautyService icon={<GiComb />} title='Барбершоп' description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.' />
+            <BeautyService icon={<GiComb />} title='Барбершоп' description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.' />
+            <BeautyService icon={<GiComb />} title='Барбершоп' description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.' />
+            <BeautyService icon={<GiComb />} title='Барбершоп' description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.' />
+            <BeautyService icon={<GiComb />} title='Барбершоп' description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.' />
+            <BeautyService icon={<GiComb />} title='Барбершоп' description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.' />
+            <BeautyService icon={<GiComb />} title='Барбершоп' description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.' />
+          </div>
+        </div>
+        <Line />
+        <div>
+          <div className='w-[68%] flex-col flex gap-10'>
+            <HeaderTitle text='Продвигайте свои мастер-классы, тренинги и обучения на платформах bookers' />
+            <p className='text-base text-gray-400'>Мы предлагаем мастерам внедрение кросс-маркетинговых проектов в рамках программы “Мастер класс”. Данная программа предназначена для мастеров, которые проводят мастер-классы, тренинги и обучения по своей специальности.</p>
+            <p className='text-3xl text-white'>Какую пользу вы получите с участием в программе “Мастер классы”</p>
+          </div>
+        </div>
+        <div className='flex gap-10 items-center flex-wrap py-10 gap-y-5'>
+          <HomeNews title='Повышение лояльности аудитории — создание условий для укрепления связи с текущими клиентами и привлечения новых.' />
+          <HomeNews title='Увеличение узнаваемости бренда — активное продвижение вашего бренда через различные каналы, чтобы сделать его более известным и популярным..' />
+          <HomeNews title='Сбор целевой аудитории — привлечение и удержание клиентов, которые действительно заинтересованы в ваших услугах и продуктах.' />
+          <HomeNews title='Мониторинг интереса  — постоянный анализ и отслеживание предпочтений и интересов аудитории для более точного удовлетворения их потребностей.' />
+          <HomeNews title='Создание эффективного канала продвижения — разработка и внедрение стратегий, которые обеспечат максимальную эффективность в продвижении ваших услуг и продуктов.' />
         </div>
       </div>
     </>
