@@ -5,25 +5,6 @@ import avatar from "@/assets/serveces/avatar.png";
 import Hero from "@/components/hero/hero";
 import opacha from "../../../assets/images/firstHero.png";
 
-import i18n from "i18next";
-import { useTranslation } from "next-i18next";
-// import { initReactI18next } from "react-i18next";
-// import { en } from "@/cons/language/en";
-// import { ru } from "@/cons/language/ru";
-// import { uz } from "@/cons/language/uz";
-import languageStore from "@/types/language/languageStore";
-import { useEffect } from "react";
-
-// i18n.use(initReactI18next).init({
-//   resources: {
-//     en: { translation: en },
-//     ru: { translation: ru },
-//     uz: { translation: uz },
-//   },
-//   lng: "ru",
-//   fallbackLng: "ru",
-// });
-
 export const metadata: Metadata = {
   title: "Bookers | Services",
   description: "Bookers website for services",
@@ -153,14 +134,6 @@ const servicesData = [
 ];
 
 const Services = () => {
-  // const { selectedLanguage } = languageStore();
-  // const { t } = useTranslation();
-  //
-  // // Component ilk render bo'lganda ishlaydigan useEffect
-  // useEffect(() => {
-  //   i18n.changeLanguage(selectedLanguage);
-  // }, [selectedLanguage]);
-
   return (
     <section className="py-10 relative">
       <div className="-translate-y-20">

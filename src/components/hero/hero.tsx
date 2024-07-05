@@ -6,9 +6,9 @@ import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import HeaderTitle from '../text/header-title';
 import heroImage from '../../../assets/images/firstHero.png';
-import Image, { StaticImageData } from 'next/image'; 
+import Image from 'next/image';
 
-const Hero: React.FC<{ splide?: boolean, title?: string, description?: string, heroImg?: StaticImageData }> = ({ splide, title, description, heroImg }) => {
+const Hero: React.FC<{ splide?: boolean, title?: string, description?: string, heroImg?: any }> = ({ splide, title, description, heroImg }) => {
   return (
     <div className="relative h-screen w-full">
       {splide ? (
