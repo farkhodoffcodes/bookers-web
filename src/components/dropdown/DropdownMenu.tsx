@@ -23,7 +23,7 @@ const options: MenuOption[] = [
 ];
 
 const DropdownMenu: React.FC = () => {
-    const {lang, setLang, setSelectedLanguage} = languageStore()
+    const { setSelectedLanguage } = languageStore()
     const [selected, setSelected] = useState('RUS');
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -34,12 +34,12 @@ const DropdownMenu: React.FC = () => {
 
     const handleSelect = (option: MenuOption) => {
         setSelected(option.name);
-        setLang(option.value)
+        localStorage.setItem("selectedLanguage", option.value)
         setIsOpen(false);
     };
 
     useEffect(() => {
-        changeLanguage(lang, setSelectedLanguage)
+        changeLanguage(setSelectedLanguage)
     }, [selected])
 
     useEffect(() => {
