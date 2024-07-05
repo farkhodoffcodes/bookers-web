@@ -1,3 +1,4 @@
+"use client"
 import ServicesCard from "@/components/cards/services-card";
 import { Metadata } from "next";
 import images from "@/assets/serveces/servece.png";

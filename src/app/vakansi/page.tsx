@@ -1,3 +1,4 @@
+"use client"
 import Hero from "@/components/hero/hero";
 import Opacha from "../../../assets/images/Opacha.png"
 import HeaderTitle from "@/components/text/header-title";

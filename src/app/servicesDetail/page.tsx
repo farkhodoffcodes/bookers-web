@@ -1,3 +1,4 @@
+"use client"
 import MissionValuesCard from "@/components/cards/mission-card";
 import VacanciesCard from "@/components/cards/vacancies";
 import Hero from "@/components/hero/hero";
