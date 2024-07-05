@@ -1,7 +1,7 @@
 "use client"
 
 import ServicesCard from "@/components/cards/services-card";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import images from "@/assets/serveces/servece.png";
 import avatar from "@/assets/serveces/avatar.png";
 import Hero from "@/components/hero/hero";
@@ -26,10 +26,10 @@ i18n.use(initReactI18next).init({
   fallbackLng: "ru",
 });
 
-export const metadata: Metadata = {
-  title: "Bookers | Services",
-  description: "Bookers website for services",
-};
+// export const metadata: Metadata = {
+//   title: "Bookers | Services",
+//   description: "Bookers website for services",
+// };
 
 const servicesData = [
   {
