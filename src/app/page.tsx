@@ -2,7 +2,7 @@
 import Button from "@/components/button/button";
 import i18n from "i18next";
 import React, { Fragment, useEffect, useState } from "react";
-import { initReactI18next } from "react-i18next";
+import { initReactI18next, useTranslation } from "react-i18next";
 import { en } from "@/cons/language/en";
 import { ru } from "@/cons/language/ru";
 import { uz } from "@/cons/language/uz";
@@ -15,18 +15,18 @@ i18n.use(initReactI18next).init({
     ru: { translation: ru },
     uz: { translation: uz },
   },
-  lng: "en",
-  fallbackLng: "en",
+  lng: "ru",
+  fallbackLng: "ru",
 });
 
 const Home = () => {
-  const { selectedLanguage, setLang, setSelectedLanguage } = languageStore();
+  const { selectedLanguage } = languageStore();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { t } = useTranslation()
 
   // Component ilk render bo'lganda ishlaydigan useEffect
   useEffect(() => {
     i18n.changeLanguage(selectedLanguage);
-    setLang(selectedLanguage);
   }, [selectedLanguage]);
 
   const handleButtonClick = () => {
@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <Fragment>
       <div>
-        <Button title="Войти / Регистрация" outlineStyle onClick={handleButtonClick} />
+        <Button title={t("loginRegister")} outlineStyle onClick={handleButtonClick} />
       </div>
       <ModalForm isOpen={isModalOpen} onClose={handleCloseModal} />
     </Fragment>
