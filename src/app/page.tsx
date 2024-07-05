@@ -21,8 +21,8 @@ i18n.use(initReactI18next).init({
 
 const Home = () => {
   const { selectedLanguage } = languageStore();
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useTranslation()
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Component ilk render bo'lganda ishlaydigan useEffect
   useEffect(() => {
