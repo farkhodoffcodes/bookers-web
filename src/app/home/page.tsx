@@ -262,6 +262,10 @@ const Home = () => {
             <HomeStatistic icon={IoMdCheckmarkCircleOutline} count={1200} subTitle='успешных бронирований'/>
           </div>
         </div>
+        <Line />
+        <div>
+          <HeaderTitle text='Бизнес-партнеры мобильного приложения bookers'/>
+        </div>
       </div>
     </>
   )
