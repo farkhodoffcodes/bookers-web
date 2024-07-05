@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import Button from '../button/button';
 
-const ServicesCard = ({ data }: { data: any }) => {
+const ServicesCard = ({ data, key }: { data: any, key: string | number }) => {
     return (
-        <div className="rounded-xl shadow-lg bg-[#B9B9C9] p-6">
+        <div className="rounded-xl shadow-lg bg-[#B9B9C9] p-6" key={key}>
             <Image
                 src={data.mainImage}
                 alt="Barber shop"
