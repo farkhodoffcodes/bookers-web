@@ -5,6 +5,7 @@ import '../../app/globals.css';
 import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import HeaderTitle from '../text/header-title';
+import heroImage from '../../../assets/images/firstHero.png';
 import Image, { StaticImageData } from 'next/image'; 
 
 const Hero: React.FC<{ splide?: boolean, title?: string, description?: string, heroImg?: StaticImageData }> = ({ splide, title, description, heroImg }) => {
@@ -20,7 +21,7 @@ const Hero: React.FC<{ splide?: boolean, title?: string, description?: string, h
           }}
         >
           <SplideSlide>
-            <div className="flex flex-col md:flex-row justify-between items-center h-full p-4 md:p-8 bg-opacity-50 bg-black">
+            <div className="flex flex-col md:flex-row justify-between items-center h-full p-4 md:p-8">
               <div className="w-full md:w-1/2 text-white">
                 <HeaderTitle text="Система бронирования для мастеров, салонов красоты и их клиентов" />
                 <p className="text-gray-300 text-lg mt-4">
@@ -30,7 +31,7 @@ const Hero: React.FC<{ splide?: boolean, title?: string, description?: string, h
                 </p>
               </div>
               <div className="w-full md:w-1/2 flex justify-center mt-4 md:mt-0">
-                <Image className="rounded-lg" src={heroImg ? heroImg : ''} alt="Hero image" width={400} height={400} />
+                <Image className="rounded-lg" src={heroImage} alt="Hero image" width={400} height={400} />
               </div>
             </div>
           </SplideSlide>

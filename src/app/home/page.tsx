@@ -9,7 +9,7 @@ import { FaPhone, FaSearch } from 'react-icons/fa';
 import Link from 'next/link'
 import HomeOffers from '@/components/cards/homeOffers'
 import { BsGift } from "react-icons/bs";
-import { PiHandCoinsLight } from "react-icons/pi";
+import { PiHandCoinsLight, PiUsersThree } from "react-icons/pi";
 import { TbVectorBezier2 } from "react-icons/tb";
 import HeaderTitle from '@/components/text/header-title'
 import BeautyService from '@/components/cards/beauty-service'
@@ -19,6 +19,11 @@ import Button from '@/components/button/button'
 import HomeFeedback from '@/components/cards/homeFeedback'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '../globals.css'
+import HomeStatistic from '@/components/cards/homeStatistic'
+import { SlGraduation } from "react-icons/sl";
+import { GrLocation } from "react-icons/gr";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+
 
 const Line = () => {
   return (
@@ -100,19 +105,25 @@ const feedbacks = [
     image: heroImg,
     masterName: 'Анастасия Дан',
     salonName: 'Beauty Wave',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley .',
   },
   {
     image: heroImg,
     masterName: 'Роман Левел',
     salonName: 'Tamo Style',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley .',
   },
   {
     image: heroImg,
     masterName: 'Алекс Саккетт',
     salonName: 'Lotus SPA',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley .',
+  },
+  {
+    image: heroImg,
+    masterName: 'Алекс Саккетт',
+    salonName: 'Lotus SPA',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley .',
   },
 ];
 
@@ -122,9 +133,7 @@ const Home = () => {
       <div>
         <SearchBar />
         <Hero
-          description='Мы создаем систему взаимодействия между мастерами, бизнес-партнерами (салонами красоты) и клиентами, что является основной миссией данной системы бронирования. Платформа BOOKERS создает комфортные и выгодные условия для каждого клиента, предоставляя квалифицированные услуги мастеров.'
-          title='Система бронирования для мастеров, салонов красоты и их клиентов'
-          heroImg={heroImg}
+          splide
         />
         <Line />
         <div className='flex justify-between'>
@@ -206,6 +215,21 @@ const Home = () => {
                 </SplideSlide>
               ))}
             </Splide>
+          </div>
+          <div className='flex justify-center items-center'>
+            <div className='w-[250px] py-5'>
+              <Button title='Оставить отзыв' />
+            </div>
+          </div>
+        </div>
+        <Line />
+        <div>
+          <HeaderTitle text='Статистика bookers' />
+          <div className='flex justify-between py-10'>
+            <HomeStatistic icon={SlGraduation} count={500} subTitle='Количество мастеров'/>
+            <HomeStatistic icon={PiUsersThree} count={1200} subTitle='Количество клиентов'/>
+            <HomeStatistic icon={GrLocation} count={135} subTitle='Количество локаций'/>
+            <HomeStatistic icon={IoMdCheckmarkCircleOutline} count={1200} subTitle='успешных бронирований'/>
           </div>
         </div>
       </div>
