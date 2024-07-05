@@ -15,6 +15,10 @@ import HeaderTitle from '@/components/text/header-title'
 import BeautyService from '@/components/cards/beauty-service'
 import { GiComb } from "react-icons/gi";
 import HomeNews from '@/components/cards/homeNews'
+import Button from '@/components/button/button'
+import HomeFeedback from '@/components/cards/homeFeedback'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '../globals.css'
 
 const Line = () => {
   return (
@@ -45,7 +49,7 @@ const SearchBar: React.FC = () => {
           value={query}
           onChange={handleInputChange}
           placeholder="Поиск мастеров/салонов/услуг"
-          className="bg-transparent outline-none w-[300px] px-2"
+          className="bg-transparent outline-none w-[300px]"
         />
         <button type="submit" className="bg-[#9c0b35] rounded-full p-2 ml-2">
           <FaSearch />
@@ -90,6 +94,27 @@ const ThirdCard = [
   { text: 'Модуль управления персоналом' },
   { text: 'Модуль комьюнити' },
 ]
+
+const feedbacks = [
+  {
+    image: heroImg,
+    masterName: 'Анастасия Дан',
+    salonName: 'Beauty Wave',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+  },
+  {
+    image: heroImg,
+    masterName: 'Роман Левел',
+    salonName: 'Tamo Style',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+  },
+  {
+    image: heroImg,
+    masterName: 'Алекс Саккетт',
+    salonName: 'Lotus SPA',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+  },
+];
 
 const Home = () => {
   return (
@@ -137,9 +162,55 @@ const Home = () => {
           <HomeNews title='Мониторинг интереса  — постоянный анализ и отслеживание предпочтений и интересов аудитории для более точного удовлетворения их потребностей.' />
           <HomeNews title='Создание эффективного канала продвижения — разработка и внедрение стратегий, которые обеспечат максимальную эффективность в продвижении ваших услуг и продуктов.' />
         </div>
+        <div className='bg-[#B9B9C9] flex justify-between p-5 items-center rounded-2xl my-5'>
+          <div className='w-2/3'>
+            <p className='text-2xl font-bold text-[#9C0B35]'>Для  создания объявления и обеспечения видимости мероприятия в мобильном приложении и на сайте BOOKERS отправьте заявку.</p>
+          </div>
+          <div className='w-[20%]'>
+            <Button title='Отправить заявку' />
+          </div>
+        </div>
+        <Line />
+        <div>
+          <div className='w-[90%]'>
+            <HeaderTitle text='Ознакомьтесь с отзывами клиентов касательно услуг мастеров и салонов красоты перед бронированием' />
+          </div>
+          <div className="max-w-7xl mx-auto">
+            <Splide
+              options={{
+                type: 'loop',
+                perPage: 3,
+                gap: '1rem',
+                rewind: true,
+                pagination: true,
+                arrows: true,
+                perMove: 1,
+                classes: {
+                  arrows: 'splide__arrows splide__arrows--top',
+                  prev: 'splide__arrow--prev',
+                  next: 'splide__arrow--next',
+                },
+                breakpoints: {
+                  1024: {
+                    perPage: 2,
+                  },
+                  768: {
+                    perPage: 1,
+                  },
+                },
+              }}
+            >
+              {feedbacks.map((feedback, index) => (
+                <SplideSlide key={index}>
+                  <HomeFeedback salonName={feedback.salonName} masterName={feedback.masterName} image={feedback.image} description={feedback.description} />
+                </SplideSlide>
+              ))}
+            </Splide>
+          </div>
+        </div>
       </div>
     </>
   )
 }
 
-export default Home
+export default Home;
