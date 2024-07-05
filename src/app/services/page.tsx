@@ -165,14 +165,14 @@ const Services = () => {
   return (
     <section className="py-10 relative">
       <div className="-translate-y-20">
-        <Hero
-          title={`Услуги мастеров и салонов красоты: Барбершоп`}
-          heroImg={opacha}
-        />
+        {/*<Hero*/}
+        {/*  title={`Услуги мастеров и салонов красоты: Барбершоп`}*/}
+        {/*  heroImg={opacha}*/}
+        {/*/>*/}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {servicesData.map((services) => (
-          <ServicesCard data={services} />
+          <ServicesCard data={services} key={services.id} />
         ))}
       </div>
     </section>
