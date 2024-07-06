@@ -21,7 +21,7 @@ const options: MenuOption[] = [
 ];
 
 const DropdownMenu: React.FC = () => {
-  const [selected, setSelected] = useState('');
+  const [selected, setSelected] = useState('uz');
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
