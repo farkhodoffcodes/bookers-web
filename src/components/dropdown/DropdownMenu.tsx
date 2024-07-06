@@ -6,8 +6,6 @@ import uzbekImg from "../../assets/images/uzbekFlag.png";
 import usaImg from "../../assets/images/usaFlag.png";
 import russianImg from "../../assets/images/russiaFlag.png";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
-import languageStore from "@/types/language/languageStore";
-import { changeLanguage } from "@/types/language/languageFunctions";
 
 type MenuOption = {
   value: string;
@@ -23,7 +21,6 @@ const options: MenuOption[] = [
 ];
 
 const DropdownMenu: React.FC = () => {
-  const { setSelectedLanguage } = languageStore();
   const [selected, setSelected] = useState(() => {
     if (localStorage.getItem("selectedLanguage") === "ru") {
       return "RUS";
@@ -47,10 +44,6 @@ const DropdownMenu: React.FC = () => {
     setSelected(option.name);
     setIsOpen(false);
   };
-
-  useEffect(() => {
-    changeLanguage(setSelectedLanguage);
-  }, [selected]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

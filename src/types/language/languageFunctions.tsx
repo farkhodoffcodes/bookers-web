@@ -1,3 +1,3 @@
-export const changeLanguage = ( setSelectedLanguage: any) => {
-    setSelectedLanguage(localStorage.getItem("selectedLanguage"));
-  };
+// export const changeLanguage = ( setSelectedLanguage: any) => {
+//     setSelectedLanguage(localStorage.getItem("selectedLanguage"));
+//   };
