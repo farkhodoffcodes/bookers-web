@@ -1,6 +1,7 @@
 import { FaFacebookF, FaInstagram, FaTelegramPlane, FaYoutube } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -58,8 +59,8 @@ const Footer = () => {
                     <Link href="#" className="text-gray-400 hover:text-white"><FaYoutube /></Link>
                 </div>
                 <div className="flex space-x-4">
-                    <Link href="#" className="text-gray-400 hover:text-white"><img src="/path-to-appstore-badge.png" alt="Download on the App Store" /></Link>
-                    <Link href="#" className="text-gray-400 hover:text-white"><img src="/path-to-googleplay-badge.png" alt="Get it on Google Play" /></Link>
+                    <Link href="#" className="text-gray-400 hover:text-white"><Image src="/path-to-appstore-badge.png" alt="Download on the App Store" /></Link>
+                    <Link href="#" className="text-gray-400 hover:text-white"><Image src="/path-to-googleplay-badge.png" alt="Get it on Google Play" /></Link>
                 </div>
             </div>
         </footer>

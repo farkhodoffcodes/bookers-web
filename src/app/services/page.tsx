@@ -27,10 +27,6 @@ i18n.use(initReactI18next).init({
     fallbackLng: "ru",
 });
 
-export const metadata: Metadata = {
-    title: "Bookers | Services",
-    description: "Bookers website for services",
-};
 
 const servicesData = [
     {

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { CiCircleCheck } from "react-icons/ci";
 
@@ -11,7 +12,7 @@ const CardComponent: React.FC = () => {
     return (
         <div className="w-full bg-[#B9B9C9] p-6 rounded-xl shadow-md">
             <div className="flex items-center mb-8">
-                <img src="/path/to/image.png" alt="Icon" className="w-12 h-12 mr-4" />
+                <Image src="/path/to/image.png" alt="Icon" className="w-12 h-12 mr-4" />
                 <h2 className="text-2xl font-bold text-[#9C0B35] sm:w-[50%] md:w-[60%] lg:w-[70%]">
                     Какую интеграцию предлагает BOOKERS бизнес-партнерам:
                 </h2>
