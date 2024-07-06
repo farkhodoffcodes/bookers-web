@@ -28,12 +28,6 @@ import selloIMG from '../assets/images/sello.png';
 import uzumIMG from '../assets/images/uzum.png';
 import osonIMG from '../assets/images/oson.png';
 import NewsHome from '@/components/cards/newsHome';
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: "Bookers",
-  description: "Bookers website",
-};
 
 const Line = () => {
   return (
