@@ -27,26 +27,7 @@ import clickIMG from '../assets/images/click.png';
 import selloIMG from '../assets/images/sello.png';
 import uzumIMG from '../assets/images/uzum.png';
 import osonIMG from '../assets/images/oson.png';
-import i18n from "i18next";
-import { useTranslation } from "next-i18next";
-import { initReactI18next } from "react-i18next";
-import { en } from "@/cons/language/en";
-import { ru } from "@/cons/language/ru";
-import { uz } from "@/cons/language/uz";
-import languageStore from "@/types/language/languageStore";
-import { useEffect } from "react";
 import NewsHome from '@/components/cards/newsHome'
-
-
-i18n.use(initReactI18next).init({
-  resources: {
-    en: { translation: en },
-    ru: { translation: ru },
-    uz: { translation: uz },
-  },
-  lng: "ru",
-  fallbackLng: "ru",
-});
 
 const Line = () => {
   return (
@@ -59,22 +40,12 @@ const Line = () => {
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
 
-  const { selectedLanguage } = languageStore();
-  const { t } = useTranslation();
-
-  // Component ilk render bo'lganda ishlaydigan useEffect
-  useEffect(() => {
-    i18n.changeLanguage(selectedLanguage);
-  }, [selectedLanguage]);
-
-
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(event.target.value);
   };
 
   const handleSearch = (event: React.FormEvent) => {
     event.preventDefault();
-    // Handle the search logic here, such as making an API call with the query
     console.log('Search query:', query);
   };
 

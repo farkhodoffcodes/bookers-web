@@ -1,37 +1,13 @@
-"use client"
 import MissionValuesCard from "@/components/cards/mission-card";
 import VacanciesCard from "@/components/cards/vacancies";
 import Hero from "@/components/hero/hero";
 import HeaderTitle from "@/components/text/header-title";
 import Subtitle from "@/components/text/subtitle";
-import { BsCheckCircle } from "react-icons/bs";
 import { CiCircleCheck } from "react-icons/ci";
 import Mask1 from '../../assets/images/Mask1.png'
 import Guvohnoma from '../../assets/images/guvohnoma.png'
 import Guvohnoma2 from '../../assets/images/guvohnoma2.png'
 import Image from "next/image";
-
-
-import i18n from "i18next";
-import { useTranslation } from "next-i18next";
-import { initReactI18next } from "react-i18next";
-import { en } from "@/cons/language/en";
-import { ru } from "@/cons/language/ru";
-import { uz } from "@/cons/language/uz";
-import languageStore from "@/types/language/languageStore";
-import { useEffect } from "react";
-
-
-i18n.use(initReactI18next).init({
-    resources: {
-      en: { translation: en },
-      ru: { translation: ru },
-      uz: { translation: uz },
-    },
-    lng: "ru",
-    fallbackLng: "ru",
-  });
-
 
 const modulesData = [
     "Модуль управления клиентами",
@@ -55,21 +31,14 @@ const vacanciesData = [
 ];
 
 const ServicesCard = () => {
-    const { selectedLanguage } = languageStore();
-  const { t } = useTranslation();
-
-   // Component ilk render bo'lganda ishlaydigan useEffect
-   useEffect(() => {
-    i18n.changeLanguage(selectedLanguage);
-  }, [selectedLanguage]);
-
     return (
         <>
             <div>
                 <Hero
                     title="Компания Well Tech предлагает продукты программных обеспечений для создания автоматизации процессов и улучшения эффективности бизнес процессов"
                     description="Компания Well Tech ведет свою деятельность в сфере информационных технологий и активно участвует в развитии IT-инфраструктуры нашей страны. За короткий срок своего существования наша компания реализовала ряд успешных проектов, включая bookers"
-                    heroImg={Mask1} />
+                    heroImg={Mask1}
+                />
             </div>
             <div className="mb-10">
                 <HeaderTitle
@@ -85,8 +54,8 @@ const ServicesCard = () => {
                     />
                 ))}
                 <div className="flex justify-between">
-                        <Image src={Guvohnoma} alt="" />
-                        <Image src={Guvohnoma2} alt=""  layout="responsive" />   
+                    <Image src={Guvohnoma} alt="" />
+                    <Image src={Guvohnoma2} alt="" layout="responsive" />
                 </div>
             </div>
 
@@ -104,7 +73,8 @@ const ServicesCard = () => {
             </div>
             <div className="mb-7 w-[60%]">
                 <Subtitle
-                    text='Well Tech объединяет талантливых разработчиков, дизайнеров, проектных менеджеров, маркетологов и аналитиков и квалифицированных специалистов своего направления. Каждый из нас вносит уникальный вклад в создание  IT-решений и ведение успешных проектов.' />
+                    text='Well Tech объединяет талантливых разработчиков, дизайнеров, проектных менеджеров, маркетологов и аналитиков и квалифицированных специалистов своего направления. Каждый из нас вносит уникальный вклад в создание  IT-решений и ведение успешных проектов.'
+                />
             </div>
             <div className="w-full bg-[#B9B9C9] p-6 rounded-xl shadow-md mb-10">
                 <div className="flex items-center text-center mb-8">
