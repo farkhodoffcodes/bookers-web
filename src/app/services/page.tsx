@@ -7,7 +7,7 @@ import opacha from "../../assets/images/firstHero.png";
 import Button from "@/components/button/button";
 
 export const metadata: Metadata = {
-    title: "Bookers",
+    title: "Bookers | Services",
     description: "Bookers website",
 };
 

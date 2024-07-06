@@ -8,6 +8,12 @@ import Mask1 from '../../assets/images/Mask1.png'
 import Guvohnoma from '../../assets/images/guvohnoma.png'
 import Guvohnoma2 from '../../assets/images/guvohnoma2.png'
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Bookers | Services details",
+    description: "Bookers website",
+};
 
 const modulesData = [
     "Модуль управления клиентами",

@@ -5,7 +5,7 @@ import HeaderTitle from "@/components/text/header-title";
 import VacanciesCard from "@/components/cards/vacancies";
 
 export const metadata: Metadata = {
-    title: "Bookers",
+    title: "Bookers | Vacancies",
     description: "Bookers website",
   };
 
