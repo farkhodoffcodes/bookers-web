@@ -2,8 +2,8 @@
 import Hero from '@/components/hero/hero'
 import Image from 'next/image'
 import React, { useState } from 'react'
-import line from '../../assets/line.png'
-import heroImg from '../../assets/images/firstHero.png';
+import line from '../assets/line.png'
+import heroImg from '../assets/images/firstHero.png';
 import { FaPhone, FaSearch } from 'react-icons/fa';
 import Link from 'next/link'
 import HomeOffers from '@/components/cards/homeOffers'
@@ -22,11 +22,11 @@ import HomeStatistic from '@/components/cards/homeStatistic'
 import { SlGraduation } from "react-icons/sl";
 import { GrLocation } from "react-icons/gr";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import paymeIMG from '../../assets/images/payme.png';
-import clickIMG from '../../assets/images/click.png';
-import selloIMG from '../../assets/images/sello.png';
-import uzumIMG from '../../assets/images/uzum.png';
-import osonIMG from '../../assets/images/oson.png';
+import paymeIMG from '../assets/images/payme.png';
+import clickIMG from '../assets/images/click.png';
+import selloIMG from '../assets/images/sello.png';
+import uzumIMG from '../assets/images/uzum.png';
+import osonIMG from '../assets/images/oson.png';
 import i18n from "i18next";
 import { useTranslation } from "next-i18next";
 import { initReactI18next } from "react-i18next";

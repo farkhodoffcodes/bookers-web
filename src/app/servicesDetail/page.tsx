@@ -6,9 +6,9 @@ import HeaderTitle from "@/components/text/header-title";
 import Subtitle from "@/components/text/subtitle";
 import { BsCheckCircle } from "react-icons/bs";
 import { CiCircleCheck } from "react-icons/ci";
-import Mask1 from '../../../assets/images/Mask1.png'
-import Guvohnoma from '../../../assets/images/guvohnoma.png'
-import Guvohnoma2 from '../../../assets/images/guvohnoma2.png'
+import Mask1 from '../../assets/images/Mask1.png'
+import Guvohnoma from '../../assets/images/guvohnoma.png'
+import Guvohnoma2 from '../../assets/images/guvohnoma2.png'
 import Image from "next/image";
 
 

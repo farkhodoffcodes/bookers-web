@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import line from '../../../assets/images/Rectangle 17.png';
+import line from '../../assets/images/Rectangle 17.png';
 
 const HomeNews: React.FC<{ title: string }> = ({ title }) => {
     return (

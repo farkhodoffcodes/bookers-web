@@ -5,7 +5,7 @@ import {Metadata} from "next";
 import images from "@/assets/serveces/servece.png";
 import avatar from "@/assets/serveces/avatar.png";
 import Hero from "@/components/hero/hero";
-import opacha from "../../../assets/images/firstHero.png";
+import opacha from "../../assets/images/firstHero.png";
 
 import i18n from "i18next";
 import {useTranslation} from "next-i18next";

@@ -2,9 +2,9 @@
 
 import Image, { StaticImageData } from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import uzbekImg from "../../../assets/images/uzbekFlag.png";
-import usaImg from "../../../assets/images/usaFlag.png";
-import russianImg from "../../../assets/images/russiaFlag.png";
+import uzbekImg from "../../assets/images/uzbekFlag.png";
+import usaImg from "../../assets/images/usaFlag.png";
+import russianImg from "../../assets/images/russiaFlag.png";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import languageStore from "@/types/language/languageStore";
 import { changeLanguage } from "@/types/language/languageFunctions";

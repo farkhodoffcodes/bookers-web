@@ -1,6 +1,6 @@
 "use client"
 import Hero from "@/components/hero/hero";
-import Opacha from "../../../assets/images/Opacha.png"
+import Opacha from "../../assets/images/Opacha.png"
 import HeaderTitle from "@/components/text/header-title";
 import VacanciesCard from "@/components/cards/vacancies";
 import { title } from "process";

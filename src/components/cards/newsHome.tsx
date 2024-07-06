@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import img from '../../../assets/Rectangle 4165.png'
+import img from '../../assets/Rectangle 4165.png'
 import { FaCalendarAlt } from 'react-icons/fa';
 import Link from 'next/link';
 

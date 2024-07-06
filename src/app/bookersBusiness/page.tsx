@@ -1,6 +1,6 @@
 "use client";
 import Hero from "@/components/hero/hero";
-import Mask from "../../../assets/images/Mask.png";
+import Mask from "../../assets/images/Mask.png";
 import HeaderTitle from "@/components/text/header-title";
 import Subtitle from "@/components/text/subtitle";
 import CardComponent from "@/components/cards/busnes-card";
