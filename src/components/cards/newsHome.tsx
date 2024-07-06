@@ -15,7 +15,7 @@ const NewsHome = () => {
                         <p className="text-gray-600 text-xs">18 июня 2024 г.</p>
                     </div>
                     <p className="text-gray-800 text-lg my-2 font-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <p className="text-gray-600 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...</p>
+                    <p className="text-gray-600 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since...</p>
                     <Link className="text-[#9C0B35] no-underline text-sm" href="#">
                         Подробнее
                     </Link>
